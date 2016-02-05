@@ -27,6 +27,10 @@
             display: flex;
             align-items: center;
         }
+        .vmiddle {
+            vertical-align: middle;
+        }
+
     </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -195,8 +199,77 @@
         </div>
     </div>
 
-    <div class="row row-content" id="reserve-table">
+    <div class="row row-content">
+        <div class="col col-xs-12 col-sm-3">
+            <h3><strong>Reserve a Table</strong></h3>
+        </div>
+        <div class="col col-xs-12 col-sm-9">
+            <form role="form" id="reserve-table">
 
+                <div class="row">
+                    <div class="col col-xs-12 col-sm-2">
+                        <label>Number of Guests:</label>
+                    </div>
+                    <div class="col col-xs-12 col-sm-10">
+                        <div class="form-group">
+                            <label class="radio-inline" for="seats1"><input type="radio" id="seats1" name="seats"
+                                                                            required>1</label>&nbsp;
+                            <label class="radio-inline" for="seats2"><input type="radio" id="seats2" name="seats"
+                                                                            checked>2</label>&nbsp;
+                            <label class="radio-inline" for="seats3"><input type="radio" id="seats3"
+                                                                            name="seats">3</label>&nbsp;
+                            <label class="radio-inline" for="seats4"><input type="radio" id="seats4"
+                                                                            name="seats">4</label>&nbsp;
+                            <label class="radio-inline" for="seats5"><input type="radio" id="seats5"
+                                                                            name="seats">5</label>&nbsp;
+                            <label class="radio-inline" for="seats6"><input type="radio" id="seats6"
+                                                                            name="seats">6</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-xs-12 col-sm-2">
+                        <label class="caption">Date and Time:</label>
+                    </div>
+                    <div class="col col-xs-12 col-sm-3">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="Date" name="reserveDate"/>
+                            <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                        </div>
+                    </div>
+                    <div class="col col-xs-12 col-sm-3">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="Time" name="reserveTime"/>
+                            <i class="glyphicon glyphicon-time form-control-feedback"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-xs-12 col-sm-2">
+
+                    </div>
+                    <div class="col col-xs-12 col-sm-10">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Reserve</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col col-sm-12">
+                        <div class="form-group">
+                            <div class="alert alert-warning alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <strong>Warning!</strong> Please <strong>call</strong> us to reserve for more that six guests.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
     </div>
 </div>
 
