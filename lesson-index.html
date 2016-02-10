@@ -16,6 +16,11 @@
             text-align: center;
         }
     </style>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </head>
 <body>
 
@@ -29,7 +34,8 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2" data-toggle="tooltip" data-placement="bottom"
+                title="The Class Flahship Project: Ristorante Con Fusion">
             <p style="padding:1px;"></p>
             <a href="index.html" class="btn btn-block btn-danger" role="button">Ristorante Con Fusion</a>
         </div>
@@ -59,9 +65,10 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2" data-toggle="tooltip" data-placement="bottom"
+             title="Example of navbar menu, including navbar form, and navtab">
             <p style="padding:1px;"></p>
-            <a href="example-nav-tabs.html" class="btn btn-block btn-success" role="button">Bootstrap Nav Tabs</a>
+            <a href="example-nav-tabs.html" class="btn btn-block btn-success" role="button">Bootstrap Nav Bar and Nav Tabs</a>
         </div>
     </div>
     <div class="row">
