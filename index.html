@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ristorante Con Fusion Task 2</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
-    <link href="css/mystyles-old.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
 
     <style type="text/css">
         /* This is necessary to make 'Remember Me' text appear in white. Otherwise it comes out
@@ -93,7 +93,7 @@
                 <li><a href="contactus.html"><span class="fa fa-envelope-o"></span> Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a data-toggle="modal" data-target="#loginModal">
+                <li><a class="btn" id="loginLink">
                     <span class="glyphicon glyphicon-log-in"></span> Login</a>
                 </li>
             </ul>
@@ -255,7 +255,7 @@
             </div>
             <div class="col-xs-12 col-sm-2">
                 <p style="padding:40px;"></p>
-                <a data-toggle="modal" data-target="#reserveModal" class="btn btn-warning btn-block">
+                <a class="btn btn-warning btn-block" id="reserveLink">
                     <span class="glyphicon glyphicon-log-in"></span> Reserve Table</a>
             </div>
         </div>
@@ -473,8 +473,8 @@
     </div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script>
     //-- Handle carousel actions
@@ -485,6 +485,15 @@
         });
         $("#carousel-play").click(function(){
             $("#mycarousel").carousel('cycle');
+        });
+
+        //-- Handle click event for login link
+        $("#loginLink").click(function(evt){
+            $('#loginModal').modal('toggle');
+        });
+        //-- Handle click event for reserve link
+        $("#reserveLink").click(function(evt){
+            $('#reserveModal').modal('toggle');
         });
     });
 </script>
